@@ -10,5 +10,6 @@ cloop:      mov     bl, byte [rsi + rcx]
 
 loop:       cmp     byte [rsi + rcx], 0
             jne     cloop
+            mov     byte [rdi + rcx], 0
             mov     rax, rdi
             ret

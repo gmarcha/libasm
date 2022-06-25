@@ -11,8 +11,8 @@ void testStrcpy(void) {
     longStr[longStrSize] = '\0';
     memset(longStr, '0', longStrSize);
     const char* strs[] = { "", "1", "Hello World", longStr, NULL };
-    char testDest[longStrSize + 1] = {0};
-    char myDest[longStrSize + 1] = {0};
+    char testDest[longStrSize + 1];
+    char myDest[longStrSize + 1];
 
     // RUN
     printf("ft_strcpy:");

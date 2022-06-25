@@ -11,9 +11,7 @@ ft_strdup:  mov     r12, rdi
             inc     rdi
             call    malloc
             cmp     rax, 0
-            je      end
-            mov     byte [rax + rbx], 0
             mov     rdi, rax
             mov     rsi, r12
             call    ft_strcpy
-end:        ret
+            ret
