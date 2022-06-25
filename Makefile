@@ -13,8 +13,8 @@ ARFLAGS		:= -rcs
 
 TESTS_HDR	:= tests.h
 
-SRCS_FILES	:= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s
-TESTS_FILES	:= ft_strlen.c ft_strcpy.c ft_strcmp.c ft_write.c main.c
+SRCS_FILES	:= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s
+TESTS_FILES	:= ft_strlen.c ft_strcpy.c ft_strcmp.c ft_write.c ft_read.c ft_strdup.c main.c
 
 SRCS_DIR	:= srcs/
 TESTS_DIR	:= tests/
@@ -32,6 +32,9 @@ test:						$(NAME_TEST)
 
 run:						test
 							./$(NAME_TEST)
+
+valgrind:					test
+							valgrind ./$(NAME_TEST)
 
 debug:						test
 							$(CDEBUG) $(NAME_TEST)
