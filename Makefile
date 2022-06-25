@@ -57,7 +57,7 @@ clean:
 							rm -rf $(OBJS_DIR)
 
 fclean:						clean
-							rm -rf $(NAME)
+							rm -rf $(NAME) $(NAME_TEST)
 
 re:							fclean all
 
